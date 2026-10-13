@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SDLBasics Testing/SDLBasics Testing.vcxproj" Id="78e77c50-f857-4723-8da4-05d3e23cb728" />
+  <Project Path="SDLBasics/SDLBasics.vcxproj" Id="ee61d3d1-285f-4238-817a-5fa689b0431a" />
+</Solution>
