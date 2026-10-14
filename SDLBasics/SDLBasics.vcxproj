@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\arran\source\repos\SDLBasics\SDLBasics\include;C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\arran\source\repos\SDLBasics\SDLBasics\include;C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\arran\source\repos\SDLBasics\SDLBasics\include;C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\arran\source\repos\SDLBasics\SDLBasics\include;C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -171,7 +171,16 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Log.h" />
     <ClInclude Include="include\SDLBasics.h" />
+    <ClInclude Include="include\SDL.h" />
+    <ClInclude Include="include\Time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\Log.cpp" />
+    <ClCompile Include="src\SDL.cpp" />
+    <ClCompile Include="src\SDLBasics.cpp" />
+    <ClCompile Include="src\Time.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
