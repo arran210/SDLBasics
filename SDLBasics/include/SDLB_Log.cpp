@@ -1,7 +1,7 @@
 #include <sstream>
 
-#include "Log.h"
-#include "Time.h"
+#include "SDLB_Log.h"
+#include "SDLB_Time.h"
 
 std::stringstream Log::message_builder;
 

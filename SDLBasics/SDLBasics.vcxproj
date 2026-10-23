@@ -171,16 +171,16 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Log.h" />
+    <ClInclude Include="include\SDLB_Log.h" />
     <ClInclude Include="include\SDLBasics.h" />
     <ClInclude Include="include\SDL.h" />
-    <ClInclude Include="include\Time.h" />
+    <ClInclude Include="include\SDLB_Time.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\Log.cpp" />
+    <ClCompile Include="include\SDLB_Log.cpp" />
     <ClCompile Include="src\SDL.cpp" />
     <ClCompile Include="src\SDLBasics.cpp" />
-    <ClCompile Include="src\Time.cpp" />
+    <ClCompile Include="src\SDLB_Time.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

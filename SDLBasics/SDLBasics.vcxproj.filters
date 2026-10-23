@@ -17,10 +17,10 @@
     <ClInclude Include="include\SDL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Log.h">
+    <ClInclude Include="include\SDLB_Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Time.h">
+    <ClInclude Include="include\SDLB_Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,10 +28,10 @@
     <ClCompile Include="src\SDL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\Log.cpp">
+    <ClCompile Include="include\SDLB_Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Time.cpp">
+    <ClCompile Include="src\SDLB_Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLBasics.cpp">

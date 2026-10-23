@@ -1,6 +1,6 @@
 #pragma once
-#include "Log.h"
-#include "Time.h"
+#include "SDLB_Log.h"
+#include "SDLB_Time.h"
 #include "SDL.h"
 
 class SDLBasics
