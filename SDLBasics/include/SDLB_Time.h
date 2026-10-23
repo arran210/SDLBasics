@@ -29,8 +29,19 @@ public:
 	/// </summary>
 	static double GetTrueElapsedTime();
 
+    /// <summary>
+    /// Amount of time that has passed since the epoch (1 Jan 1970) in seconds
+    /// </summary>
+    static double GetTime();
+
 	/// <summary>
 	/// Gets the current date and time as a string
 	/// </summary>
 	static const std::string& GetDateTimeString();
+
+private:
+    static double delta_time;
+    static double elapsed_time;
+    static double true_elapsed_time;
+    static double previous_frame_time;
 };
