@@ -174,10 +174,12 @@
     <ClInclude Include="include\SDLB_Keys.h" />
     <ClInclude Include="include\SDLB_Log.h" />
     <ClInclude Include="include\SDLBasics.h" />
+    <ClInclude Include="include\SDLB_Mouse.h" />
     <ClInclude Include="include\SDLB_SDL.h" />
     <ClInclude Include="include\SDLB_Time.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\SDLB_Mouse.cpp" />
     <ClCompile Include="src\SDLB_SDL.cpp" />
     <ClCompile Include="src\SDLBasics.cpp" />
     <ClCompile Include="src\SDLB_Keys.cpp" />

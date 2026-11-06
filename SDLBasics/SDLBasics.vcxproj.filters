@@ -26,6 +26,9 @@
     <ClInclude Include="include\SDLB_Keys.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SDLB_Mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SDLB_SDL.cpp">
@@ -41,6 +44,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLB_Keys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
