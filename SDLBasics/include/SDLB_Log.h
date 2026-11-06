@@ -11,6 +11,11 @@ public:
 	static int Init();
 
 	/// <summary>
+    /// Runs at the end of the program to signal program exit and save the log to a file
+	/// </summary>
+	static int Exit();
+
+	/// <summary>
 	/// Logs an info message
 	/// </summary>
 	static int LogInfo(const std::string& message);
@@ -24,6 +29,7 @@ public:
 	/// Logs an error message
 	/// </summary>
 	static int LogError(const std::string& message);
+
 
 private:
 	static std::stringstream message_builder;

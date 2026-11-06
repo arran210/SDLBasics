@@ -28,13 +28,13 @@
     <ClCompile Include="src\SDL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\SDLB_Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SDLB_Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLBasics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

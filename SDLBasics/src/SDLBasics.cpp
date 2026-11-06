@@ -3,3 +3,10 @@
 #include "SDLB_Log.h"
 #include "SDLB_Time.h"
 #include "SDL.h"
+
+int SDLBasics::Init()
+{
+    Log::Init();
+    Time::Init();
+    return 0;
+}

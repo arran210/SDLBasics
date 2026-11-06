@@ -32,7 +32,7 @@ public:
     /// <summary>
     /// Amount of time that has passed since the epoch (1 Jan 1970) in seconds
     /// </summary>
-    static double GetTime();
+    static double GetCurrentTime();
 
 	/// <summary>
 	/// Gets the current date and time as a string
@@ -44,4 +44,6 @@ private:
     static double elapsed_time;
     static double true_elapsed_time;
     static double previous_frame_time;
+	static double start_time;
+    static unsigned long long frame_count;
 };
