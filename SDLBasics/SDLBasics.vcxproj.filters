@@ -23,6 +23,9 @@
     <ClInclude Include="include\SDLB_Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SDLB_Keys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SDL.cpp">
@@ -35,6 +38,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLB_Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Keys.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

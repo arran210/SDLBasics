@@ -171,6 +171,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\SDLB_Keys.h" />
     <ClInclude Include="include\SDLB_Log.h" />
     <ClInclude Include="include\SDLBasics.h" />
     <ClInclude Include="include\SDL.h" />
@@ -179,6 +180,7 @@
   <ItemGroup>
     <ClCompile Include="src\SDL.cpp" />
     <ClCompile Include="src\SDLBasics.cpp" />
+    <ClCompile Include="src\SDLB_Keys.cpp" />
     <ClCompile Include="src\SDLB_Log.cpp" />
     <ClCompile Include="src\SDLB_Time.cpp" />
   </ItemGroup>
