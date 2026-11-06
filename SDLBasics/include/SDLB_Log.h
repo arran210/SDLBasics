@@ -39,5 +39,8 @@ private:
 	/// </summary>
 	static int PrefixMessage();
 
+	/// <summary>
+	/// Saves every log currently made since the last save and clears the message_builder variable
+	/// </summary>
 	static int SaveLogToFile();
 };

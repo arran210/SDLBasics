@@ -2,12 +2,39 @@
 
 #include "SDL3/SDL.h"
 
-class Keys
-{
-public:
+bool Keys::keys[SDL_SCANCODE_COUNT];
+bool Keys::keys_down[SDL_SCANCODE_COUNT];
+bool Keys::keys_up[SDL_SCANCODE_COUNT];
 
-private:
-    static bool keys[SDL_NUM_SCANCODES];
-    static bool keys_down[SDL_NUM_SCANCODES];
-    static bool keys_up[SDL_NUM_SCANCODES];
-};
+int Keys::Init()
+{
+    return 0;
+}
+
+int Keys::Update()
+{
+    const bool* current_key_states = SDL_GetKeyboardState(NULL);
+    for (int i = 0; i < SDL_SCANCODE_COUNT; ++i)
+    {
+        bool is_pressed = current_key_states[i] != 0;
+        keys_down[i] = is_pressed && !keys[i];
+        keys_up[i] = !is_pressed && keys[i];
+        keys[i] = is_pressed;
+    }
+    return 0;
+}
+
+bool Keys::GetKey(unsigned short key)
+{
+    return keys[key];
+}
+
+bool Keys::GetKeyDown(unsigned short key)
+{
+    return keys_down[key];
+}
+
+bool Keys::GetKeyUp(unsigned short key)
+{
+    return keys_up[key];
+}
