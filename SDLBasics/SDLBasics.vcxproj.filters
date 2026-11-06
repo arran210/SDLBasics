@@ -14,7 +14,7 @@
     <ClInclude Include="include\SDLBasics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\SDL.h">
+    <ClInclude Include="include\SDLB_SDL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SDLB_Log.h">
@@ -28,7 +28,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\SDL.cpp">
+    <ClCompile Include="src\SDLB_SDL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLB_Time.cpp">
