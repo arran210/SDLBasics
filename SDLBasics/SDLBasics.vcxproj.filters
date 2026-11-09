@@ -9,6 +9,18 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{2acfc813-c881-41d9-aac9-a986df28e6b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils\Core">
+      <UniqueIdentifier>{4e7a8fb4-8e19-43ab-9396-ad8c65db24c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{b7c17e2b-3a49-49d8-8c44-df8f97d8d6f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{9aa7b3f1-bc52-4481-92ff-1ee5d7a46c5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SDLBasics.h">
@@ -29,25 +41,31 @@
     <ClInclude Include="include\SDLB_Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SDLB_Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\SDLB_SDL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SDLB_Time.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SDLBasics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SDLB_Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SDLB_Keys.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Log.cpp">
+      <Filter>Source Files\Utils\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\SDLB_Mouse.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_SDL.cpp">
+      <Filter>Source Files\Utils\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Time.cpp">
+      <Filter>Source Files\Utils\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDLB_Window.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

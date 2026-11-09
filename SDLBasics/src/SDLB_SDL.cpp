@@ -10,4 +10,6 @@ int SDL::Init()
 		std::cerr << "Unable to initialize SDL: " << SDL_GetError() << std::endl;
 		return 1;
 	}
+
+	return 0;
 }

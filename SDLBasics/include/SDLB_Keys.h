@@ -1,5 +1,4 @@
 #pragma once
-#include "SDL3/SDL_scancode.h"
 
 class Keys
 {
@@ -30,7 +29,7 @@ public:
     static bool GetKeyUp(unsigned short key);
 
 private:
-    static bool keys[SDL_SCANCODE_COUNT];
-    static bool keys_down[SDL_SCANCODE_COUNT];
-    static bool keys_up[SDL_SCANCODE_COUNT];
+    static bool keys[512];
+    static bool keys_down[512];
+    static bool keys_up[512];
 };

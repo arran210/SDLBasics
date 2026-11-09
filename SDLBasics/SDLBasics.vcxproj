@@ -177,6 +177,7 @@
     <ClInclude Include="include\SDLB_Mouse.h" />
     <ClInclude Include="include\SDLB_SDL.h" />
     <ClInclude Include="include\SDLB_Time.h" />
+    <ClInclude Include="include\SDLB_Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SDLB_Mouse.cpp" />
@@ -185,6 +186,7 @@
     <ClCompile Include="src\SDLB_Keys.cpp" />
     <ClCompile Include="src\SDLB_Log.cpp" />
     <ClCompile Include="src\SDLB_Time.cpp" />
+    <ClCompile Include="src\SDLB_Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
