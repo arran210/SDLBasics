@@ -3,6 +3,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="SDL-3.4.20/VisualC/SDL/SDL.vcxproj" Id="81ce8daf-ebb2-4761-8e45-b71abcca8c68" />
   <Project Path="SDLBasics Testing/SDLBasics Testing.vcxproj" Id="78e77c50-f857-4723-8da4-05d3e23cb728" />
   <Project Path="SDLBasics/SDLBasics.vcxproj" Id="ee61d3d1-285f-4238-817a-5fa689b0431a" />
 </Solution>
