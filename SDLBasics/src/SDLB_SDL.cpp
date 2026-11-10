@@ -5,7 +5,7 @@
 
 int SDL::Init()
 {
-	if (SDL_Init(SDL_INIT_VIDEO) != 0)
+	if (!SDL_Init(SDL_INIT_VIDEO))
 	{
 		std::cerr << "Unable to initialize SDL: " << SDL_GetError() << std::endl;
 		return 1;

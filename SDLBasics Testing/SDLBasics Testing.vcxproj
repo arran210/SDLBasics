@@ -150,6 +150,9 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SDL-3.4.20\VisualC\SDL\SDL.vcxproj">
+      <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\SDLBasics\SDLBasics.vcxproj">
       <Project>{ee61d3d1-285f-4238-817a-5fa689b0431a}</Project>
     </ProjectReference>

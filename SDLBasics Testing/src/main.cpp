@@ -1,9 +1,11 @@
 #include "SDLBasics.h"
 
+#include <iostream>
+
 int main(int argc, char* argv[])
 {
     // Initialize the SDLBasics library
-    if (SDLBasics::Init() != 0)
+    if (!SDLBasics::Init())
     {
         return 1;
     }

@@ -79,11 +79,11 @@
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)include;$(ProjectDir)lib\SDL3-3.4.20\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)lib\SDL3-3.4.20\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)SDL-3.4.20\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\arran\source\repos\SDLBasics\SDLBasics\include;C:\Users\arran\source\lib\SDL3-3.4.18\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;$(SolutionDir)SDL3-3.4.20\VisualC\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\arran\source\lib\SDL3-3.4.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
