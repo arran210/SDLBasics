@@ -4,6 +4,7 @@
 #include "SDLB_Keys.h"
 #include "SDLB_Mouse.h"
 #include "SDLB_SDL.h"
+#include "SDLB_Window.h"
 
 
 class SDLBasics
@@ -12,5 +13,5 @@ public:
 	/// <summary>
 	/// Initializes the SDLBasics library and all its subsystems
 	/// </summary>
-	static int Init();
+	static bool Init();
 };

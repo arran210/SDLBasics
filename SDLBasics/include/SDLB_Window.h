@@ -6,12 +6,11 @@ class SDL_Window;
 class Window
 {
 public:
-    Window(const std::string& title, int width, int height)
-        : window(nullptr)
-    {
-        Create(title, width, height);
-    }
+    Window() = default;
+    Window(const std::string& title, int width, int height);
     ~Window();
+
+    bool Update();
 
     bool Create(const std::string& title, int width, int height);
 
@@ -23,5 +22,5 @@ public:
 
 
 private:
-    SDL_Window* window;
+    SDL_Window* window = nullptr;
 };

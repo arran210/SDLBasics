@@ -1,4 +1,5 @@
 #include "SDLB_Time.h"
+#include "SDLB_Log.h"
 
 #include <chrono>
 
@@ -10,18 +11,25 @@ unsigned long long Time::frame_count = 0;
 
 int Time::Init()
 {
+    Log::LogInfo("Initializing Time management system...");
     delta_time = 0.0;
     elapsed_time = 0.0;
     previous_frame_time = GetCurrentTime();
     start_time = GetCurrentTime();
     frame_count = 0;
+    Log::LogInfo("Time management system initialized successfully.");
     return 0;
 }
 
 int Time::Update()
 {
-    delta_time = GetCurrentTime() - previous_frame_time;
-    elapsed_time = GetCurrentTime() - start_time;
+    double current_time = GetCurrentTime();
+
+
+    delta_time = current_time - previous_frame_time;
+    elapsed_time = current_time - start_time;
+
+    previous_frame_time = current_time;
 
     frame_count++;
 
@@ -45,7 +53,9 @@ double Time::GetTrueElapsedTime()
 
 double Time::GetCurrentTime()
 {
-    return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    auto now = std::chrono::system_clock::now();
+
+    return std::chrono::duration<double>(now.time_since_epoch()).count();
 }
 
 const std::string& Time::GetDateTimeString()

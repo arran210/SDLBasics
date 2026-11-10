@@ -1,6 +1,6 @@
 #include "SDLBasics.h"
 
-int SDLBasics::Init()
+bool SDLBasics::Init()
 {
     Log::Init();
     Time::Init();
@@ -9,5 +9,5 @@ int SDLBasics::Init()
 
     SDL::Init();
 
-    return 0;
+    return true;
 }

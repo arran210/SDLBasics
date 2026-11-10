@@ -1,5 +1,6 @@
 #include "SDLB_Keys.h"
 
+#include "SDLB_Log.h"
 #include "SDL3/SDL.h"
 
 bool Keys::keys[SDL_SCANCODE_COUNT];
@@ -8,6 +9,8 @@ bool Keys::keys_up[SDL_SCANCODE_COUNT];
 
 int Keys::Init()
 {
+    Log::LogInfo("Initializing Keys...");
+    Log::LogInfo("Keys initialized successfully.");
     return 0;
 }
 
