@@ -5,6 +5,7 @@
 #include "SDLB_Mouse.h"
 #include "SDLB_SDL.h"
 #include "SDLB_Window.h"
+#include "SDLB_FileSystem.h"
 
 
 class SDLBasics

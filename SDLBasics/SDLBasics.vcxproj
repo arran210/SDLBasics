@@ -171,6 +171,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\SDLB_FileSystem.h" />
     <ClInclude Include="include\SDLB_Keys.h" />
     <ClInclude Include="include\SDLB_Log.h" />
     <ClInclude Include="include\SDLBasics.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="include\SDLB_Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\SDLB_FileSystem.cpp" />
     <ClCompile Include="src\SDLB_Mouse.cpp" />
     <ClCompile Include="src\SDLB_SDL.cpp" />
     <ClCompile Include="src\SDLBasics.cpp" />
