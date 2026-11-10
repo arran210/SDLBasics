@@ -6,12 +6,12 @@ public:
     /// <summary>
     /// Initialises the mouse input system
     /// </summary>
-    static int Init();
+    static bool Init();
 
     /// <summary>
     /// Updates the mouse input system each frame
     /// </summary>
-    static int Update();
+    static bool Update();
 
     /// <summary>
     /// Checks if the current mouse button is down

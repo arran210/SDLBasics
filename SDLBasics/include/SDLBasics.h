@@ -14,4 +14,9 @@ public:
 	/// Initializes the SDLBasics library and all its subsystems
 	/// </summary>
 	static bool Init();
+
+	/// <summary>
+	/// Updates each SDLBasics subsystem, intended to be called once per frame
+	/// </summary>
+	static bool Update();
 };

@@ -24,8 +24,8 @@ int main(int argc, char* argv[])
 
     while (running)
     {
-        // Update the time management system
-        Time::Update();
+        // Update the SDLB system
+        SDLBasics::Update();
 
         window.Update();
         std::this_thread::sleep_for(std::chrono::milliseconds(16)); // Simulate frame time (~60 FPS)

@@ -7,12 +7,12 @@ public:
 	/// <summary>
 	/// Initializes the time management system
 	/// </summary>
-	static int Init();
+	static bool Init();
 
 	/// <summary>
 	/// Called at the end of every frame to update the time management system
 	/// </summary>
-	static int Update();
+	static bool Update();
 
 	/// <summary>
 	/// Amount of time passed since the last frame and the one before in seconds

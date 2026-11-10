@@ -7,7 +7,7 @@
 
 std::stringstream Log::message_builder;
 
-int Log::Init()
+bool Log::Init()
 {
     std::atexit((void(*)())SaveLogToFile);
 
@@ -15,68 +15,65 @@ int Log::Init()
     if (!log_file.is_open())
     {
         std::cerr << "Failed to create log file: SDLBasics_Log.txt" << std::endl;
-        return 1;
+        return false;
     }
 	log_file.close();
 
-	return 0;
+	return true;
 }
 
-int Log::Exit()
+bool Log::Exit()
 {
 	LogInfo("Program exiting...");
 
-	SaveLogToFile();
+	if (!SaveLogToFile())
+	{
+		std::cerr << "Failed to save log to file." << std::endl;
+		return false;
+	}
 
-	return 0;
+	return true;
 }
 
-int Log::LogInfo(const std::string& message)
+void Log::LogInfo(const std::string& message)
 {
 	PrefixMessage();
 
 	message_builder << "[INFO]: " << message << std::endl;
-
-    return 0;
 }
 
-int Log::LogWarning(const std::string& message)
+void Log::LogWarning(const std::string& message)
 {
 	PrefixMessage();
 
 	message_builder << "[WARNING]: " << message << std::endl;
-
-    return 0;
 }
 
-int Log::LogError(const std::string& message)
+void Log::LogError(const std::string& message)
 {
 	PrefixMessage();
 
 	message_builder << "[ERROR]: " << message << std::endl;
-
-    return 0;
 }
 
-int Log::PrefixMessage()
+void Log::PrefixMessage()
 {
 	message_builder << "[" << Time::GetDateTimeString() << "]";
-	return 0;
 }
 
-int Log::SaveLogToFile()
+bool Log::SaveLogToFile()
 {
 	/* SAVE THE LOG MESSAGE TO A FILE */
     std::ofstream log_file("SDLBasics_Log.txt", std::ios::out | std::ios::app);
     if (!log_file.is_open())
     {
         std::cerr << "Failed to open log file for writing: SDLBasics_Log.txt" << std::endl;
-        return 1;
+        return false;
     }
     log_file << message_builder.str();
     log_file.close();
 
 	// Clear the message builder after saving
 	message_builder.str("");
-	return 0;
+	return true;
 }

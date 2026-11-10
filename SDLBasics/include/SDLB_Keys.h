@@ -6,12 +6,12 @@ public:
     /// <summary>
     /// Initialises the key input system
     /// </summary>
-    static int Init();
+    static bool Init();
 
     /// <summary>
     /// Updates the key input system
     /// </summary>
-    static int Update();
+    static bool Update();
 
     /// <summary>
     /// Checks if the inputted key is currently down

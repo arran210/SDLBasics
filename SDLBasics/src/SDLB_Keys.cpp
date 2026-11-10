@@ -7,14 +7,14 @@ bool Keys::keys[SDL_SCANCODE_COUNT];
 bool Keys::keys_down[SDL_SCANCODE_COUNT];
 bool Keys::keys_up[SDL_SCANCODE_COUNT];
 
-int Keys::Init()
+bool Keys::Init()
 {
     Log::LogInfo("Initializing Keys...");
     Log::LogInfo("Keys initialized successfully.");
-    return 0;
+    return true;
 }
 
-int Keys::Update()
+bool Keys::Update()
 {
     const bool* current_key_states = SDL_GetKeyboardState(NULL);
     for (int i = 0; i < SDL_SCANCODE_COUNT; ++i)
@@ -24,7 +24,7 @@ int Keys::Update()
         keys_up[i] = !is_pressed && keys[i];
         keys[i] = is_pressed;
     }
-    return 0;
+    return true;
 }
 
 bool Keys::GetKey(unsigned short key)

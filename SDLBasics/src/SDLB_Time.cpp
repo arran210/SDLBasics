@@ -9,22 +9,24 @@ double Time::previous_frame_time = 0.0;
 double Time::start_time = 0.0;
 unsigned long long Time::frame_count = 0;
 
-int Time::Init()
+bool Time::Init()
 {
     Log::LogInfo("Initializing Time management system...");
+
     delta_time = 0.0;
     elapsed_time = 0.0;
     previous_frame_time = GetCurrentTime();
     start_time = GetCurrentTime();
     frame_count = 0;
+
     Log::LogInfo("Time management system initialized successfully.");
-    return 0;
+
+    return true;
 }
 
-int Time::Update()
+bool Time::Update()
 {
     double current_time = GetCurrentTime();
-
 
     delta_time = current_time - previous_frame_time;
     elapsed_time = current_time - start_time;
@@ -33,7 +35,7 @@ int Time::Update()
 
     frame_count++;
 
-    return 0;
+    return true;
 }
 
 double Time::GetDeltaTime()
@@ -60,5 +62,7 @@ double Time::GetCurrentTime()
 
 const std::string& Time::GetDateTimeString()
 {
-    return std::format("{:%Y-%m-%d %H:%M:%S}", std::chrono::system_clock::now());
+    auto now = std::chrono::system_clock::now();
+
+    return std::format("{:%d/%m/%Y %H:%M:%S}", now);
 }

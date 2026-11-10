@@ -11,14 +11,14 @@ float Mouse::y;
 float Mouse::delta_x;
 float Mouse::delta_y;
 
-int Mouse::Init()
+bool Mouse::Init()
 {
     Log::LogInfo("Initializing Mouse...");
     Log::LogInfo("Mouse initialized successfully.");
-    return 0;
+    return true;
 }
 
-int Mouse::Update()
+bool Mouse::Update()
 {
     float current_x, current_y;
     unsigned int mouse_state = SDL_GetMouseState(&current_x, &current_y);
@@ -36,7 +36,7 @@ int Mouse::Update()
         buttons_up[i] = !is_pressed && buttons[i];
         buttons[i] = is_pressed;
     }
-    return 0;
+    return true;
 }
 
 bool Mouse::GetButton(unsigned short button)
