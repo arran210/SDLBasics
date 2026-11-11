@@ -1,7 +1,10 @@
 #include "SDLB_Time.h"
+
 #include "SDLB_Log.h"
 
 #include <chrono>
+#include <iostream>
+#include <format>
 
 double Time::delta_time = 0.0;
 double Time::elapsed_time = 0.0;
@@ -60,9 +63,10 @@ double Time::GetCurrentTime()
     return std::chrono::duration<double>(now.time_since_epoch()).count();
 }
 
-const std::string& Time::GetDateTimeString()
+std::string Time::GetDateTimeString()
 {
     auto now = std::chrono::system_clock::now();
+    auto str = std::format("{:%d/%m/%Y %H:%M:%S}", now);
 
-    return std::format("{:%d/%m/%Y %H:%M:%S}", now);
+    return str;
 }

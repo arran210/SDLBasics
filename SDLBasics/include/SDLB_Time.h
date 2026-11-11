@@ -37,7 +37,7 @@ public:
 	/// <summary>
 	/// Gets the current date and time as a string
 	/// </summary>
-	static const std::string& GetDateTimeString();
+	static std::string GetDateTimeString();
 
 private:
     static double delta_time;
