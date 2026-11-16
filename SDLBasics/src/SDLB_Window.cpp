@@ -53,14 +53,14 @@ void Window::Resize(int width, int height)
 
 int Window::GetWidth() const
 {
-    int width;
+    int width = 0;
     SDL_GetWindowSize(window, &width, nullptr);
     return width;
 }
 
 int Window::GetHeight() const
 {
-    int height;
+    int height = 0;
     SDL_GetWindowSize(window, nullptr, &height);
     return height;
 }

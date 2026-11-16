@@ -3,7 +3,6 @@
 #include "SDLB_Log.h"
 
 #include <chrono>
-#include <iostream>
 #include <format>
 
 double Time::delta_time = 0.0;
