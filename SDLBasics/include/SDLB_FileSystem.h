@@ -2,6 +2,14 @@
 #include <fstream>
 #include <string>
 
+enum class FileMode
+{
+    Read,
+    Write,
+    Append
+
+};
+
 class FileSystem
 {
 public:
@@ -11,14 +19,20 @@ public:
     static bool Init();
 
     /// <summary>
-    /// returns a handle back to the opened file
+    /// Returns a handle to the opened file
+    /// Does not create the file if it doesn't exist
     /// </summary>
-    static std::fstream OpenFile(const std::string& filename, std::ios::openmode mode);
+    static std::fstream Open(const std::string& path, FileMode mode);
+
+    /// <summary>
+    /// Returns a handle to the created file in the specified open mode
+    /// </summary>
+    static std::fstream Create(const std::string& path, FileMode mode);
 
     /// <summary>
     /// closes the file passed
     /// </summary>
-    static void CloseFile(std::fstream& file);
+    static void Close(std::fstream& file);
 
     /// <summary>
     /// returns the path of the executable file being executed

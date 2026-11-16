@@ -1,15 +1,18 @@
 #include "SDLB_FileSystem.h"
 
 #include "SDLB_Log.h"
+#include <stdexcept>
 
 #ifdef _WIN32
-    #include <windows.h>
+#include <windows.h>
 #elif __linux__
-    #include <unistd.h>
+#include <unistd.h>
 #elif __APPLE__
-    #include <mach-o/dyld.h>
+#include <mach-o/dyld.h>
 #endif
 #include <filesystem>
+
+
 
 std::string FileSystem::executable_path;
 std::string FileSystem::executable_directory;
@@ -32,7 +35,7 @@ bool FileSystem::Init()
         Log::LogError("File system failed to initialize");
         return false;
     }
-    
+
 #elif __linux__
     char buffer[4096];
     ssize_t length = readlink("/proc/self/exe", buffer, sizeof(buffer) - 1);
@@ -46,7 +49,7 @@ bool FileSystem::Init()
     else
     {
         Log::LogError("File system failed to initialize")
-        return false;
+            return false;
     }
 
 #elif __APPLE__
@@ -69,13 +72,50 @@ bool FileSystem::Init()
     return true;
 }
 
-std::fstream FileSystem::OpenFile(const std::string& filename, std::ios::openmode mode)
+std::fstream FileSystem::Create(const std::string& path, FileMode mode)
 {
-    std::fstream file(filename, mode);
+    std::ofstream file = std::ofstream(path);
+
+    return Open(path, mode);
+}
+
+std::fstream FileSystem::Open(const std::string& path, FileMode mode)
+{
+    if (!std::filesystem::exists(path))
+    {
+        Log::LogError("File does not exist: " + path);
+        return std::fstream{};
+    }
+
+    std::ios::openmode open_mode = 0;
+
+    switch (mode)
+    {
+    case FileMode::Read:
+        open_mode = std::ios::in;
+        break;
+
+    case FileMode::Write:
+        open_mode = std::ios::out;
+        break;
+
+    case FileMode::Append:
+        open_mode = std::ios::out | std::ios::app;
+        break;
+    }
+
+    std::fstream file = std::fstream(path, open_mode);
+
+    if (!file.is_open())
+    {
+        Log::LogError("File failed to open: " + path);
+        return std::fstream{};
+    }
+
     return file;
 }
 
-void FileSystem::CloseFile(std::fstream& file)
+void FileSystem::Close(std::fstream& file)
 {
     file.close();
 }
