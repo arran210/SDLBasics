@@ -1,8 +1,11 @@
-include_directories(include)
+include_directories(
+        include
+)
 
-add_library(SDLBasics
+add_library(SDLBasics SHARED
         src/SDLBasics.cpp
 
+        src/core/SDLB_FileSystem.cpp
         src/core/SDLB_Keys.cpp
         src/core/SDLB_Log.cpp
         src/core/SDLB_Mouse.cpp
@@ -13,4 +16,4 @@ add_library(SDLBasics
 )
 
 # Link to the actual SDL3 library.
-target_link_libraries(SDLBasics PRIVATE SDL3::SDL3)
+target_link_libraries(SDLBasics PUBLIC SDL3::SDL3)
