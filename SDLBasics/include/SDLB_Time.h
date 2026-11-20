@@ -4,46 +4,46 @@
 class Time
 {
 public:
-	/// <summary>
+    /// <summary>
 	/// Initializes the time management system
 	/// </summary>
-	static bool Init();
+    static bool Init();
 
-	/// <summary>
+    /// <summary>
 	/// Called at the end of every frame to update the time management system
 	/// </summary>
-	static bool Update();
+    static bool Update();
 
-	/// <summary>
+    /// <summary>
 	/// Amount of time passed since the last frame and the one before in seconds
 	/// </summary>
-	static double GetDeltaTime();
+    static double GetDeltaTime();
 
-	/// <summary>
+    /// <summary>
 	/// Amount of time passed since the initialization of the Time class in seconds and the start of the current frame
 	/// </summary>
-	static double GetElapsedTime();
+    static double GetElapsedTime();
 
-	/// <summary>
+    /// <summary>
 	/// Amount of time passed since the initialization of the Time class in seconds
 	/// </summary>
-	static double GetTrueElapsedTime();
+    static double GetTrueElapsedTime();
 
     /// <summary>
     /// Amount of time that has passed since the epoch (1 Jan 1970) in seconds
     /// </summary>
     static double GetCurrentTime();
 
-	/// <summary>
+    /// <summary>
 	/// Gets the current date and time as a string
 	/// </summary>
-	static std::string GetDateTimeString();
+    static std::string GetDateTimeString();
 
 private:
     static double delta_time;
     static double elapsed_time;
     static double true_elapsed_time;
     static double previous_frame_time;
-	static double start_time;
+    static double start_time;
     static unsigned long long frame_count;
 };

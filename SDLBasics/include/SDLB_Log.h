@@ -5,42 +5,41 @@
 class Log
 {
 public:
-	/// <summary>
+    /// <summary>
 	/// Initializes the logging system
 	/// </summary>
-	static bool Init();
+    static bool Init();
 
-	/// <summary>
+    /// <summary>
     /// Runs at the end of the program to signal program exit and save the log to a file
 	/// </summary>
-	static bool Exit();
+    static bool Exit();
 
-	/// <summary>
+    /// <summary>
 	/// Logs an info message
 	/// </summary>
-	static void LogInfo(const std::string& message);
+    static void LogInfo(const std::string& message);
 
-	/// <summary>
+    /// <summary>
 	/// Logs a warning message
 	/// </summary>
-	static void LogWarning(const std::string& message);
+    static void LogWarning(const std::string& message);
 
-	/// <summary>
+    /// <summary>
 	/// Logs an error message
 	/// </summary>
-	static void LogError(const std::string& message);
-
+    static void LogError(const std::string& message);
 
 private:
-	static std::stringstream message_builder;
+    static std::stringstream message_builder;
 
-	/// <summary>
+    /// <summary>
 	/// Prefixes the message_builder with the current timestamp
 	/// </summary>
-	static void PrefixMessage();
+    static void PrefixMessage();
 
-	/// <summary>
+    /// <summary>
 	/// Saves every log currently made since the last save and clears the message_builder variable
 	/// </summary>
-	static bool SaveLogToFile();
+    static bool SaveLogToFile();
 };

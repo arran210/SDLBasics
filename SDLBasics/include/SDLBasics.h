@@ -11,13 +11,13 @@
 class SDLBasics
 {
 public:
-	/// <summary>
+    /// <summary>
 	/// Initializes the SDLBasics library and all its subsystems
 	/// </summary>
-	static bool Init();
+    static bool Init();
 
-	/// <summary>
+    /// <summary>
 	/// Updates each SDLBasics subsystem, intended to be called once per frame
 	/// </summary>
-	static bool Update();
+    static bool Update();
 };

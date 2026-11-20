@@ -10,16 +10,15 @@ public:
     Window(const std::string& title, int width, int height);
     ~Window();
 
-    bool Update();
+    bool Update() const;
 
     bool Create(const std::string& title, int width, int height);
 
-    void SetTitle(const std::string& title);
-    void Resize(int width, int height);
+    void SetTitle(const std::string& title) const;
+    void Resize(int width, int height) const;
 
     int GetWidth() const;
     int GetHeight() const;
-
 
 private:
     SDL_Window* window = nullptr;

@@ -7,7 +7,6 @@ enum class FileMode
     Read,
     Write,
     Append
-
 };
 
 class FileSystem

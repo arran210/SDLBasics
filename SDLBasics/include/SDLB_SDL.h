@@ -3,8 +3,8 @@
 class SDL
 {
 public:
-	/// <summary>
+    /// <summary>
 	/// Initializes the SDL library and all its subsystems
 	/// </summary>
-	static bool Init();
+    static bool Init();
 };
