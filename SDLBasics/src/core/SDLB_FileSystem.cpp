@@ -86,7 +86,7 @@ std::fstream FileSystem::Open(const std::string& path, FileMode mode)
         return std::fstream{};
     }
 
-    std::ios::openmode open_mode = 0;
+    std::ios::openmode open_mode = std::ios::in;
 
     switch (mode)
     {
