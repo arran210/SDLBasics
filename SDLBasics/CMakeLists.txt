@@ -2,10 +2,6 @@ include_directories(
         include
 )
 
-set_target_properties(SDLBasics PROPERTIES
-        PREFIX ""
-)
-
 add_library(SDLBasics SHARED
         src/SDLBasics.cpp
 
