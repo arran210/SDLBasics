@@ -12,9 +12,7 @@ add_subdirectory(SDL)
 
 add_subdirectory(SDLBasics)
 
-set_target_properties(SDLBasics PROPERTIES
-        PREFIX ""
-)
+
 
 
 add_subdirectory(SDLB_Testing)

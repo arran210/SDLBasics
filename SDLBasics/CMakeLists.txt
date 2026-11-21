@@ -17,3 +17,7 @@ add_library(SDLBasics SHARED
 
 # Link to the actual SDL3 library.
 target_link_libraries(SDLBasics PUBLIC SDL3::SDL3)
+
+set_target_properties(SDLBasics PROPERTIES
+        PREFIX ""
+)
