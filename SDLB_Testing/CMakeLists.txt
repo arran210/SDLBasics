@@ -1,5 +1,7 @@
+include_directories(../SDLBasics/include)
+
 add_executable(SDLB_Testing
     src/main.cpp
 )
 
-target_link_libraries(SDLB_Testing PUBLIC SDLBasics)
+target_link_libraries(SDLB_Testing PUBLIC SDLB_shared)
