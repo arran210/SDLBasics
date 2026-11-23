@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.4)
+cmake_minimum_required(VERSION 3.25)
 project(SDLBasicsMain)
 
 set(CMAKE_CXX_STANDARD 26)
@@ -11,8 +11,5 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
 add_subdirectory(SDL)
 
 add_subdirectory(SDLBasics)
-
-
-
 
 add_subdirectory(SDLB_Testing)
