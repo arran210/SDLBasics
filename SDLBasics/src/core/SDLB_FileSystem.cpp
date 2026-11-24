@@ -1,6 +1,6 @@
-#include "../../include/SDLB_FileSystem.h"
+#include "SDLB/SDLB_FileSystem.h"
 
-#include "../../include/SDLB_Log.h"
+#include "SDLB/SDLB_Log.h"
 #include <stdexcept>
 
 #ifdef _WIN32

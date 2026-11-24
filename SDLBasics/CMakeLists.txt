@@ -3,7 +3,7 @@ include_directories(
 )
 
 add_library(SDLB_shared SHARED
-        src/SDLBasics.cpp
+        src/SDLB.cpp
 
         src/core/SDLB_FileSystem.cpp
         src/core/SDLB_Keys.cpp
@@ -16,7 +16,7 @@ add_library(SDLB_shared SHARED
 )
 
 add_library(SDLB_static STATIC
-        src/SDLBasics.cpp
+        src/SDLB.cpp
 
         src/core/SDLB_FileSystem.cpp
         src/core/SDLB_Keys.cpp

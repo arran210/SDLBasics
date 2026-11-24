@@ -1,14 +1,15 @@
 #pragma once
-#include "SDLB_Log.h"
-#include "SDLB_Time.h"
+// ReSharper disable CppUnusedIncludeDirective
+#include "SDLB_FileSystem.h"
 #include "SDLB_Keys.h"
+#include "SDLB_Log.h"
 #include "SDLB_Mouse.h"
 #include "SDLB_SDL.h"
+#include "SDLB_Time.h"
 #include "SDLB_Window.h"
-#include "SDLB_FileSystem.h"
 
 
-class SDLBasics
+class SDLB
 {
 public:
     /// <summary>

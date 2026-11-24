@@ -1,6 +1,6 @@
-#include "SDLB_Time.h"
+#include "SDLB/SDLB_Time.h"
 
-#include "SDLB_Log.h"
+#include "SDLB/SDLB_Log.h"
 
 #include <chrono>
 #include <format>

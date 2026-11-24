@@ -2,8 +2,8 @@
 #include <fstream>
 #include <iostream>
 
-#include "SDLB_Log.h"
-#include "SDLB_Time.h"
+#include "SDLB/SDLB_Log.h"
+#include "SDLB/SDLB_Time.h"
 
 std::stringstream Log::message_builder;
 

@@ -1,6 +1,6 @@
-#include "SDLB_Mouse.h"
+#include "SDLB/SDLB_Mouse.h"
 
-#include "SDLB_Log.h"
+#include "SDLB/SDLB_Log.h"
 #include "SDL3/SDL.h"
 
 bool Mouse::buttons[5];

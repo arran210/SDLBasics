@@ -1,6 +1,6 @@
-#include "SDLB_Keys.h"
+#include "SDLB/SDLB_Keys.h"
 
-#include "SDLB_Log.h"
+#include "SDLB/SDLB_Log.h"
 #include "SDL3/SDL.h"
 
 bool Keys::keys[SDL_SCANCODE_COUNT];

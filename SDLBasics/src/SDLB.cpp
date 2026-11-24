@@ -1,6 +1,6 @@
-#include "SDLBasics.h"
+#include "../include/SDLB/SDLB.h"
 
-bool SDLBasics::Init()
+bool SDLB::Init()
 {
     Log::LogInfo("Initializing SDLBasics...");
 
@@ -16,7 +16,7 @@ bool SDLBasics::Init()
     return true;
 }
 
-bool SDLBasics::Update()
+bool SDLB::Update()
 {
     if (!Time::Update()) return false;
     if (!Keys::Update()) return false;

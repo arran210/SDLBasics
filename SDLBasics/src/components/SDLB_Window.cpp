@@ -1,7 +1,7 @@
-#include "SDLB_Window.h"
+#include "SDLB/SDLB_Window.h"
 
 #include "SDL3/SDL.h"
-#include "SDLB_Log.h"
+#include "../../include/SDLB/SDLB_Log.h"
 
 Window::Window(const std::string& title, const int width, const int height)
 {

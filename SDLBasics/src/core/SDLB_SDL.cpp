@@ -1,6 +1,6 @@
 #include "SDL3/SDL.h"
-#include "SDLB_SDL.h"
-#include "SDLB_Log.h"
+#include "../../include/SDLB/SDLB_SDL.h"
+#include "SDLB/SDLB_Log.h"
 
 bool SDL::Init()
 {

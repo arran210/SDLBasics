@@ -1,13 +1,12 @@
-#include "SDLBasics.h"
+#include "../../SDLBasics/include/SDLB/SDLB.h"
 
-#include <iostream>
 #include <thread>
 #include <chrono>
 
 int main(int argc, char* argv[])
 {
     // Initialize the SDLBasics library
-    if (!SDLBasics::Init())
+    if (!SDLB::Init())
     {
         Log::LogError("Failed to initialize SDLBasics. Exiting application.");
         return 1;
@@ -25,7 +24,7 @@ int main(int argc, char* argv[])
     while (running)
     {
         // Update the SDLB system
-        SDLBasics::Update();
+        SDLB::Update();
 
         window.Update();
         std::this_thread::sleep_for(std::chrono::milliseconds(16)); // Simulate frame time (~60 FPS)
